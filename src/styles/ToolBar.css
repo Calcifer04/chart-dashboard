@@ -1,0 +1,57 @@
+.toolbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.searchbar-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.searchbar {
+    background-color: #FFFFFF;
+    border: 1px solid black;
+    border-radius: 13px;
+    padding: 8px;
+    width: 110px;
+    margin-left: 12%;
+    margin-top: 12%;
+    padding-left: 30px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 470;
+    font-style: normal;
+    color: black;
+}
+
+::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+.search-icon {
+    position: absolute;
+    right: 105px;
+    top: 65%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+}
+
+.profile-circle {
+    position: absolute;
+    right: 15px;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: 18px;
+}
+
+.profile-icon {
+    width: 25px;
+    height:25px;
+    padding-top: 2px;
+    padding-left: 2px;
+}
