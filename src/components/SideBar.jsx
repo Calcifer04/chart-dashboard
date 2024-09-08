@@ -19,7 +19,7 @@ const SideBar = () => {
             </div>
             {menuitems.map((item, index) => (
             <div key={index} className="box-item">{item}</div>
-            ))};
+            ))}
         </div>
     );
 };

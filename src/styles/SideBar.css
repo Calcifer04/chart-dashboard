@@ -1,17 +1,21 @@
 .box {
-    width: 300px;
+    width: 370px;
     background-color: rgb(65, 139, 202);
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h2 {
     color: #FFFFFF;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 470;
+    font-weight: 550;
     font-style: normal;
-    margin-top: 9%;
+    font-size: 35px;
+    margin-top: 22px;
     letter-spacing: 1px;
 }
 
@@ -21,20 +25,19 @@ h2 {
 }
 
 .wifi {
-    width: 17%;
-    padding-left: 10px;
-    padding-right: 15px;
+    width: 60px;
+    margin-top: 8px;
+    padding-right: 19px;
 }
 
 .box-item {
-    width:80%;
-    height: 40px;
+    width:82%;
+    height: 50px;
     background-color: #FFFFFF;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: 9%;
-    margin-bottom: 14px;
+    margin-bottom: 23px;
 }

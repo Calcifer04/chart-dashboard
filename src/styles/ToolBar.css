@@ -11,17 +11,19 @@
 .searchbar {
     background-color: #FFFFFF;
     border: 1px solid black;
-    border-radius: 13px;
+    border-radius: 22px;
     padding: 8px;
     width: 110px;
-    margin-left: 12%;
-    margin-top: 12%;
-    padding-left: 30px;
+    height: 30px;
+    margin-left: 26px;
+    margin-top: 22px;
+    padding-left: 55px;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 470;
     font-style: normal;
     color: black;
+    font-size: 20px;
 }
 
 ::placeholder {
@@ -31,11 +33,11 @@
 
 .search-icon {
     position: absolute;
-    right: 105px;
+    left: 41px;
     top: 65%;
     transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
+    width: 32px;
+    height: 32px;
     pointer-events: none;
 }
 
@@ -44,14 +46,14 @@
     right: 15px;
     border: 1px solid black;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    margin-top: 18px;
+    width: 45px;
+    height: 45px;
+    margin-top: 22px;
 }
 
 .profile-icon {
-    width: 25px;
-    height:25px;
-    padding-top: 2px;
-    padding-left: 2px;
+    width: 30px;
+    height:30px;
+    padding-top: 7px;
+    padding-left: 7px;
 }
