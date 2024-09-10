@@ -33,7 +33,7 @@ const LineChart = () => {
             },
             {
                 label: 'Software',
-                data: [25, 45, 75, 35, 55, 75],
+                data: [15, 3, 16, 19, 13, 20],
                 fill: true,
                 borderColor: 'rgb(0, 0, 0, 1)',
                 backgroundColor: 'rgb(0, 0, 0, 1)',
