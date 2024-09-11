@@ -17,22 +17,13 @@ const Content = ({searchTerm}) => {
     };
 
     const filteredData = mockData.filter(item => {
-        const lowercasedSearchterm = searchTerm.toLowerCase();
         return (
-            item.name.toLowerCase().includes(lowercasedSearchterm) ||
-            item.id.includes(lowercasedSearchterm)
+            item.name.toLowerCase().includes(searchTerm.toLowerCase()) || item.id.includes(searchTerm.toLowerCase())
         );
     })
     .sort((a, b) => {
         if (!sortField) return 0;
-        const aValue = a[sortField];
-        const bValue = b[sortField];
-
-        if (sortOrder === 'asc') {
-            return aValue > bValue ? 1 : -1;
-        } else {
-            return aValue < bValue ? 1 : -1;
-        }
+        return sortOrder === 'asc' ? (a[sortField] > b[sortField] ? 1 : -1) :(a[sortField] < b[sortField] ? 1 : -1)
     });
 
     return (
