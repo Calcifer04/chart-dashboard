@@ -1,29 +1,36 @@
 import React from 'react'
 import { Doughnut } from 'react-chartjs-2'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
+import { mockData } from '../../mock-data'
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const DonutChart = () => {
 
+    let totalStock = 0;
+    mockData.forEach((obj) => {
+      totalStock += obj.stock;
+    })
+
+    let totalSold = 0;
+    mockData.forEach((obj) => {
+      totalSold += obj.sold;
+    })
+
+    console.log(totalStock, totalSold)
+
     let data= [
         {
-          label: "IoT",
-          value: 45,
+          label: "Stock",
+          value: totalStock,
           color: "rgb(65, 139, 202, 1)",
           cutout: "65%",
         },
         {
-          label: "Hardware",
-          value: 33,
+          label: "Sold",
+          value: totalSold,
           color: "rgb(255, 229, 153, 1)",
-          cutout: "60%",
-        },
-        {
-          label: "Software",
-          value: 17,
-          color: "rgb(0, 0, 0, 1)",
-          cutout: "70%",
+          cutout: "65%",
         },
       ]
       

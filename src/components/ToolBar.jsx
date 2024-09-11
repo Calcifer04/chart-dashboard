@@ -1,11 +1,15 @@
 import React from 'react'
 import "../styles/ToolBar.css"
 
-const ToolBar = () => {
+const ToolBar = ({searchTerm, setSearchTerm}) => {
+    const handleSearch = (text) => {
+        setSearchTerm(text)
+    }
+    
     return (
-        <div className='toolbar'>
+        <div className='toolbar' >
             <div className='searchbar-wrapper'>
-                <input className='searchbar' type='text' placeholder='Search' />
+                <input onChange={(e) => handleSearch(e.target.value)} className='searchbar' type='text' placeholder='Search' value={searchTerm}/>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className='search-icon'>
                     <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                 </svg>

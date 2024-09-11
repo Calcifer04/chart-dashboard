@@ -7,7 +7,7 @@ ChartJS.register(LineElement, PointElement, LinearScale, Title, Tooltip, Legend,
 const LineChart = () => {
 
     const data = {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        labels: ['', '', '', '', '', ''],
         datasets: [
             {
                 label: 'IoT',
@@ -68,12 +68,15 @@ const LineChart = () => {
         scales: {
             y: {
                 beginAtZero: true,
+                ticks: {
+                    display: false,
+                },
             },
         },
     };
 
     return (
-        <div style={{ width: '80%', height: '80%', margin: "5%"}}>
+        <div style={{ width: '90%', height: '100%'}}>
             <Line data={data} options={options} />
         </div>
     );
