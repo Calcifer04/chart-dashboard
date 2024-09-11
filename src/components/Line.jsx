@@ -52,11 +52,11 @@ const LineChart = () => {
                 labels: {
                     usePointStyle: true,
                     font: {
-                        size: 22,
+                        size: 18,
                     },
-                    padding: 20,
+                    padding: 10,
                     boxWidth: 20,
-                    boxHeight: 15,
+                    boxHeight: 10,
                 },
             },
             tooltip: {
@@ -73,7 +73,7 @@ const LineChart = () => {
     };
 
     return (
-        <div style={{ width: '100%', height: '320px', margin: "20px"}}>
+        <div style={{ width: '80%', height: '80%', margin: "5%"}}>
             <Line data={data} options={options} />
         </div>
     );

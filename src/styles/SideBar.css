@@ -1,11 +1,14 @@
 .box {
-    width: 370px;
+    position: sticky;
+    top: 0;
+    width: 100px;
     background-color: rgb(65, 139, 202);
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    transition: width .6s ease;
 }
 
 h2 {
@@ -19,25 +22,79 @@ h2 {
     letter-spacing: 1px;
 }
 
+.heading-text {
+    display: none;
+    
+}
+
 .box-heading {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
 }
 
 .wifi {
     width: 60px;
-    margin-top: 8px;
-    padding-right: 19px;
+    height: 60px;
+    margin: 8px 19px 32px 14px;
+    flex-shrink: 0;
+    top: 0px;
 }
 
 .box-item {
-    width:82%;
+    width: 60%;
     height: 50px;
     background-color: #FFFFFF;
     border-radius: 8px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: 23px;
+    margin-left: 17px;
+    position: relative;
+    overflow: hidden;
+}
+
+.icons {
+    width: 30px;
+    height: 30px;
+    margin-left: 13px;
+    flex-shrink: 0;
+}
+
+.item-text {
+    opacity: 0;
+    font-size: 20px;
+    white-space: nowrap;
+    position: absolute;
+    left: 60px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateX(-20px);
+}
+
+/* Expanded styles */
+.box.expanded {
+    width: 370px;
+}
+
+.box.expanded .heading-text {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.box.expanded .box-item {
+    width: 82%;
+    justify-content: flex-start;
+}
+
+.box.expanded .item-text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.box:not(.expanded) .item-text {
+    display: none;
 }

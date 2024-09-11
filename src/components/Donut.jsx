@@ -36,8 +36,8 @@ const DonutChart = () => {
               font: {
                 size: 22,
               },
-              padding: 40,
-              boxWidth: 80,
+              padding: 20,
+              boxWidth: 40,
               boxHeight: 15,
             },
           },
@@ -66,7 +66,7 @@ const DonutChart = () => {
         };
 
     return (
-        <div style={{ width: '90%', height: '240px', margin: "20px"}}>
+        <div style={{ width: '80%', height: '80%', margin: "5%"}}>
             <Doughnut data={finalData} options={options}/>
         </div>
     )
