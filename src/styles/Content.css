@@ -22,6 +22,7 @@
 .item-wrapper {
     width: 100%;
 }
+
 .table-box::-webkit-scrollbar {
     display: none;
 }
@@ -86,7 +87,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .donut-wrapper {
@@ -178,7 +178,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .donut-wrapper {

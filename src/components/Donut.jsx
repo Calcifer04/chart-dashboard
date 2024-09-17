@@ -1,19 +1,21 @@
 import React from 'react'
 import { Doughnut } from 'react-chartjs-2'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
-import { mockData } from '../../mock-data'
+import useProducts from '../hooks/useProducts'
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const DonutChart = () => {
+  
+  const listOfProducts = useProducts();
 
     let totalStock = 0;
-    mockData.forEach((obj) => {
+    listOfProducts.forEach((obj) => {
       totalStock += obj.stock;
     })
 
     let totalSold = 0;
-    mockData.forEach((obj) => {
+    listOfProducts.forEach((obj) => {
       totalSold += obj.sold;
     })
 

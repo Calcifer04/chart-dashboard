@@ -1,12 +1,13 @@
-import { mockData } from '../../mock-data'
 import React, { useState } from 'react'
 import Donut from './Donut'
 import Line from './Line'
 import SortArrow from '../assets/sortarrow.svg'
+import useProducts from '../hooks/useProducts'
 import '../styles/Content.css'
 
 const Content = ({searchTerm}) => {
     
+    const listOfProducts = useProducts();
     const [sortField, setSortField] = useState('null');
     const [sortOrder, setSortOrder] = useState('asc');
 
@@ -16,7 +17,7 @@ const Content = ({searchTerm}) => {
         setSortOrder(newSortOrder);
     };
 
-    const filteredData = mockData.filter(item => {
+    const filteredData = listOfProducts.filter(item => {
         return (
             item.name.toLowerCase().includes(searchTerm.toLowerCase()) || item.id.includes(searchTerm.toLowerCase())
         );

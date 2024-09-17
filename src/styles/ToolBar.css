@@ -62,3 +62,11 @@
     padding-top: 7px;
     padding-left: 7px;
 }
+
+.add-button {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    margin-top: 26px;
+    right: 80px;
+}
