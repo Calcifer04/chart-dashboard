@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import Axios from 'axios';
+import useProducts from '../hooks/useProducts';
 import '../styles/addDataForm.css';
 
 const AddButtonWithForm = () => {
+    const [listOfProducts, setListOfProducts] = useProducts();
     const [showForm, setShowForm] = useState(false);
     const [name, setName] = useState("");
     const [id, setId] = useState("");
@@ -14,9 +16,15 @@ const AddButtonWithForm = () => {
     };
 
     const addProduct = () => {
+
+        if (!name || !id || !stock || !sold) {
+            alert("Please fill out all fields.");
+            return;
+        }
+        
         Axios.post("http://localhost:3001/addProducts", {name, id, stock, sold }
-        ).then((response) => {
-            alert("Product Added Successfully");
+        ).then(() => {
+            setListOfProducts([...listOfProducts, {name: name, id: id, stock: stock, sold: sold}]);
         });
     }
 
@@ -76,7 +84,7 @@ const AddButtonWithForm = () => {
                                     onChange={(e) => setSold(e.target.value)}
                                 />
                             </div>
-                            <button onClick={addProduct} type="submit">Add</button>
+                            <button className="form-button" onClick={addProduct} type="submit">Add</button>
                         </form>
                     </div>
                 </div>

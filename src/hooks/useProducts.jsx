@@ -1,17 +1,16 @@
 import { useState, useEffect } from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 
 const useProducts = () => {
     const [listOfProducts, setListOfProducts] = useState([]);
 
-
     useEffect(() => {
-        Axios.get("http://localhost:3001/getProducts").then((response) => {
+        axios.get("http://localhost:3001/getProducts").then((response) => {
         setListOfProducts(response.data);
         });
     }, []);
 
-    return listOfProducts;
+    return [listOfProducts, setListOfProducts];
     };
 
 export default useProducts;

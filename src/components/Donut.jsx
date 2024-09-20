@@ -7,7 +7,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 const DonutChart = () => {
   
-  const listOfProducts = useProducts();
+  const [listOfProducts, setListOfProducts] = useProducts();
 
     let totalStock = 0;
     listOfProducts.forEach((obj) => {
@@ -18,8 +18,6 @@ const DonutChart = () => {
     listOfProducts.forEach((obj) => {
       totalSold += obj.sold;
     })
-
-    console.log(totalStock, totalSold)
 
     let data= [
         {

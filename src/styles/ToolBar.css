@@ -47,12 +47,15 @@
 
 .profile-circle {
     position: relative;
-    right: 26px;
     border: 1px solid black;
     border-radius: 50%;
     width: 45px;
     height: 45px;
     margin-top: 22px;
+}
+.profile-add-wrapper {
+    position: absolute;
+    right: 26px;
 }
 
 .profile-icon {
@@ -67,6 +70,12 @@
     position: absolute;
     height: 40px;
     width: 40px;
+    right: 52px;
     margin-top: 26px;
-    right: 80px;
+}
+
+@media (max-width: 1000px) {
+    .profile-add-wrapper {
+        right: 44px;
+    }
 }
