@@ -184,9 +184,16 @@
 }
 
 .table-box .table-item .id {
-    overflow: hidden;
+    font-size: 15px;
     white-space: nowrap;
-    text-overflow: ellipsis;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.table-box .table-item .id::-webkit-scrollbar {
+    display: none;
 }
 
 .table-box th:last-child {

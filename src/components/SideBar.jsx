@@ -20,7 +20,7 @@ const SideBar = () => {
         <div className={`box ${isExpanded ? 'expanded' : ''}`}>
             <div className="box-heading">
                 <img className="wifi" src={Wifi} onClick={toggleSidebar} alt="Toggle sidebar" />
-                <h2 className={`heading-text ${isExpanded ? 'expanded' : ''}`}>SoftLink</h2>
+                <h2 className={`heading-text ${isExpanded ? 'expanded' : ''}`}>SlowLink</h2>
             </div>
             {menuitems.map((item, index) => (
                 <div key={index} className="box-item">
